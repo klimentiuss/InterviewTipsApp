@@ -11,7 +11,7 @@ import SwiftUI
 struct InterviewTipsApp: App {
     var body: some Scene {
         WindowGroup {
-            QuestionList()
+            MainView()
         }
     }
 }

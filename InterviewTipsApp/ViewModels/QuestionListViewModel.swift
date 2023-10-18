@@ -17,7 +17,6 @@ class QuestionListViewModel: ObservableObject {
         guard let path = Bundle.main.url(forResource: "Question", withExtension: "json") else { return }
         guard let data = try? Data(contentsOf: path) else { return }
         if let questions = try? JSONDecoder().decode([Question].self, from: data) {
-            print(questions.count)
             self.questionList = questions
         }
     }
@@ -35,7 +34,6 @@ class QuestionListViewModel: ObservableObject {
     }
     
     func sortForThemes() -> Array<String> {
-        print(Set(questionList.map{$0.theme}))
         return Array(Set(questionList.map{$0.theme}))
         
     }

@@ -21,12 +21,9 @@ struct ThemesView: View {
                     } label: {
                         Text(theme)
                     }
-
-                    
                 }
             }
             .navigationTitle("Themes")
-            
         }
         .onAppear {
             viewModel.getQuestions()

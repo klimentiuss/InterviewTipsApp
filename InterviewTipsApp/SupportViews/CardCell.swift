@@ -29,14 +29,7 @@ struct CardCell: View {
         }
         .onTapGesture {
             isHidden.toggle()
-        }
-        
-        
-        
-        
-
-        
-        
+        }   
     }
 }
 

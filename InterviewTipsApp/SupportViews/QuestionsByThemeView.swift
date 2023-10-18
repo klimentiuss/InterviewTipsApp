@@ -15,16 +15,15 @@ struct QuestionsByThemeView: View {
     var body: some View {
         List {
             ForEach(viewModel.sortByTheme(theme: theme), id: \.id) { element in
-               CardCell(
-                question: element.question,
-                answer: element.answer)
+                CardCell(
+                    question: element.question,
+                    answer: element.answer)
             }
         }
-        
-            .onAppear {
-                viewModel.getQuestions()
-                
-            }
+        .onAppear {
+            viewModel.getQuestions()
+            
+        }
     }
 }
 

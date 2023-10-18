@@ -18,14 +18,10 @@ struct RandomQuestionView: View {
                 if let question = question {
                     Section(header: Text(question.theme), content: {
                         ForEach(1..<2, id: \.self) { _ in
-                            
                             CardCell(question: question.question, answer: question.answer)
-                            
                         }
-                        
                     })
                 }
-                
             }
             .toolbar {
                 Button {
@@ -33,7 +29,6 @@ struct RandomQuestionView: View {
                 } label: {
                     Text("New question")
                 }
-                
             }
             .onAppear {
                 viewModel.getQuestions()
@@ -41,11 +36,7 @@ struct RandomQuestionView: View {
             }
             .navigationTitle("Random Question")
         }
-        
-        
     }
-    
-    
 }
 
 struct RandomQuestionView_Previews: PreviewProvider {
