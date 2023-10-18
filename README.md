@@ -11,8 +11,6 @@ This application will help you test or update your knowledge in iOS development.
 - Random question appearance
 - Dividing questions by topics
 
-## Demonstration
-
 
 
 ## Installation
@@ -22,5 +20,7 @@ This application will help you test or update your knowledge in iOS development.
 3. Open the project files in Xcode.
 4. Review the code and make sure you understand what it does.
 5. Run the active scheme.
+
+## Demonstration
 
 ![Запись экрана 2023-10-18 в 16 33 30](https://github.com/klimentiuss/InterviewTipsApp/assets/86960148/8634bd62-693c-4486-9834-1084d5b61348)
