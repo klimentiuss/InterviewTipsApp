@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct InterviewTipsApp: App {
+    
+    @StateObject private var dataController = DataController()
+    
     var body: some Scene {
         WindowGroup {
-            MainView()
+            QuestionListCoreDataView()
+                .environment(\.managedObjectContext, dataController.containet.viewContext)
         }
     }
 }
