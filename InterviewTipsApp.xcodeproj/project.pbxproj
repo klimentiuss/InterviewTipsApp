@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC90362F2AE13249004EF9CD /* EditQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC90362E2AE13249004EF9CD /* EditQuestionView.swift */; };
 		DC929C232ADFE76A00BF6253 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC929C222ADFE76A00BF6253 /* CardCell.swift */; };
 		DC929C262ADFF52500BF6253 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC929C252ADFF52500BF6253 /* MainView.swift */; };
 		DC929C282ADFF7FE00BF6253 /* RandomQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC929C272ADFF7FE00BF6253 /* RandomQuestionView.swift */; };
@@ -16,12 +17,17 @@
 		DC9C33282ADE79660099D97D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC9C33272ADE79660099D97D /* Preview Assets.xcassets */; };
 		DC9C33312ADE7A690099D97D /* Question.json in Resources */ = {isa = PBXBuildFile; fileRef = DC9C33302ADE7A690099D97D /* Question.json */; };
 		DC9C33342ADE7D400099D97D /* QuestionListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9C33332ADE7D400099D97D /* QuestionListViewModel.swift */; };
-		DC9C33372ADE7DCE0099D97D /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9C33362ADE7DCE0099D97D /* Question.swift */; };
+		DC9C33372ADE7DCE0099D97D /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9C33362ADE7DCE0099D97D /* QuestionModel.swift */; };
 		DC9C33392ADECC350099D97D /* ThemesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9C33382ADECC350099D97D /* ThemesView.swift */; };
 		DC9C333B2ADED5120099D97D /* QuestionsByThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9C333A2ADED5110099D97D /* QuestionsByThemeView.swift */; };
+		DCEE122A2AE26D6700E41C39 /* InterviewTipsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DCEE12282AE26D6700E41C39 /* InterviewTipsApp.xcdatamodeld */; };
+		DCEE122D2AE26EEA00E41C39 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEE122C2AE26EEA00E41C39 /* DataController.swift */; };
+		DCEE122F2AE272DA00E41C39 /* AddQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEE122E2AE272DA00E41C39 /* AddQuestionView.swift */; };
+		DCEE12312AE274FC00E41C39 /* QuestionListCoreDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCEE12302AE274FC00E41C39 /* QuestionListCoreDataView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC90362E2AE13249004EF9CD /* EditQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditQuestionView.swift; sourceTree = "<group>"; };
 		DC929C222ADFE76A00BF6253 /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		DC929C252ADFF52500BF6253 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		DC929C272ADFF7FE00BF6253 /* RandomQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuestionView.swift; sourceTree = "<group>"; };
@@ -32,9 +38,13 @@
 		DC9C33272ADE79660099D97D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DC9C33302ADE7A690099D97D /* Question.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Question.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		DC9C33332ADE7D400099D97D /* QuestionListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionListViewModel.swift; sourceTree = "<group>"; };
-		DC9C33362ADE7DCE0099D97D /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		DC9C33362ADE7DCE0099D97D /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 		DC9C33382ADECC350099D97D /* ThemesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesView.swift; sourceTree = "<group>"; };
 		DC9C333A2ADED5110099D97D /* QuestionsByThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsByThemeView.swift; sourceTree = "<group>"; };
+		DCEE12292AE26D6700E41C39 /* InterviewTipsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = InterviewTipsApp.xcdatamodel; sourceTree = "<group>"; };
+		DCEE122C2AE26EEA00E41C39 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		DCEE122E2AE272DA00E41C39 /* AddQuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionView.swift; sourceTree = "<group>"; };
+		DCEE12302AE274FC00E41C39 /* QuestionListCoreDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionListCoreDataView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +94,9 @@
 		DC9C331F2ADE79650099D97D /* InterviewTipsApp */ = {
 			isa = PBXGroup;
 			children = (
-				DC9C33352ADE7DBF0099D97D /* Model */,
+				DCEE122B2AE26EC700E41C39 /* CoreData */,
 				DC9C332F2ADE79A70099D97D /* App */,
+				DC9C33352ADE7DBF0099D97D /* Model */,
 				DC9C33322ADE7D2E0099D97D /* Views */,
 				DC929C242ADFF4F200BF6253 /* SupportViews */,
 				DC929C212ADFE50400BF6253 /* ViewModels */,
@@ -127,6 +138,7 @@
 				DC929C272ADFF7FE00BF6253 /* RandomQuestionView.swift */,
 				DC9C33222ADE79650099D97D /* QuestionListView.swift */,
 				DC9C33382ADECC350099D97D /* ThemesView.swift */,
+				DC90362E2AE13249004EF9CD /* EditQuestionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -134,9 +146,20 @@
 		DC9C33352ADE7DBF0099D97D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DC9C33362ADE7DCE0099D97D /* Question.swift */,
+				DC9C33362ADE7DCE0099D97D /* QuestionModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DCEE122B2AE26EC700E41C39 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				DCEE12282AE26D6700E41C39 /* InterviewTipsApp.xcdatamodeld */,
+				DCEE122C2AE26EEA00E41C39 /* DataController.swift */,
+				DCEE122E2AE272DA00E41C39 /* AddQuestionView.swift */,
+				DCEE12302AE274FC00E41C39 /* QuestionListCoreDataView.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,15 +233,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCEE12312AE274FC00E41C39 /* QuestionListCoreDataView.swift in Sources */,
 				DC929C232ADFE76A00BF6253 /* CardCell.swift in Sources */,
+				DCEE122D2AE26EEA00E41C39 /* DataController.swift in Sources */,
 				DC929C282ADFF7FE00BF6253 /* RandomQuestionView.swift in Sources */,
+				DC90362F2AE13249004EF9CD /* EditQuestionView.swift in Sources */,
 				DC929C262ADFF52500BF6253 /* MainView.swift in Sources */,
 				DC9C33392ADECC350099D97D /* ThemesView.swift in Sources */,
 				DC9C333B2ADED5120099D97D /* QuestionsByThemeView.swift in Sources */,
 				DC9C33232ADE79650099D97D /* QuestionListView.swift in Sources */,
-				DC9C33372ADE7DCE0099D97D /* Question.swift in Sources */,
+				DC9C33372ADE7DCE0099D97D /* QuestionModel.swift in Sources */,
 				DC9C33212ADE79650099D97D /* InterviewTipsApp.swift in Sources */,
 				DC9C33342ADE7D400099D97D /* QuestionListViewModel.swift in Sources */,
+				DCEE122A2AE26D6700E41C39 /* InterviewTipsApp.xcdatamodeld in Sources */,
+				DCEE122F2AE272DA00E41C39 /* AddQuestionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +453,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DCEE12282AE26D6700E41C39 /* InterviewTipsApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DCEE12292AE26D6700E41C39 /* InterviewTipsApp.xcdatamodel */,
+			);
+			currentVersion = DCEE12292AE26D6700E41C39 /* InterviewTipsApp.xcdatamodel */;
+			path = InterviewTipsApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DC9C33152ADE79650099D97D /* Project object */;
 }

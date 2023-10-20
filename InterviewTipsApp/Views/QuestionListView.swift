@@ -17,6 +17,10 @@ struct QuestionList: View {
             List {
                 ForEach(viewModel.searchResult(for: searchText), id: \.id) { element in
                     CardCell(question: element.question, answer: element.answer)
+                    NavigationLink("Edit question") {
+                        EditQuestionView(element: element)
+                    }
+                    
                 }
             }
             .navigationTitle("Questions")

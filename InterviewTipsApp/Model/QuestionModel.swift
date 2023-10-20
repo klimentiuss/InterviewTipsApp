@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Question: Codable, Identifiable {
+struct QuestionModel: Codable, Identifiable {
     var id: String
     var question: String
     var answer: String
