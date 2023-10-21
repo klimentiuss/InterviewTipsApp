@@ -6,27 +6,26 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct ThemesView: View {
     
-    @StateObject var viewModel = QuestionListViewModel()
+    @FetchRequest (sortDescriptors: [SortDescriptor(\.questionTheme, order: .reverse)]) var questionList: FetchedResults<Question>
+    @StateObject private var viewModel = ThemesViewModel()
     
     var body: some View {
         NavigationStack {
             List {
-                ForEach(viewModel.sortForThemes().sorted(), id: \.self) { theme in
+                ForEach(viewModel.sortForThemes(questionList: questionList), id: \.self) { theme in
                     NavigationLink {
-                        QuestionsByThemeView(theme: theme)
-                            .navigationTitle(theme)
+                        QuestionsByThemeView(theme: theme ?? "")
+                            .navigationTitle(theme ?? "")
                     } label: {
-                        Text(theme)
+                        Text(theme ?? "")
                     }
                 }
             }
             .navigationTitle("Themes")
-        }
-        .onAppear {
-            viewModel.getQuestions()
         }
     }
 }

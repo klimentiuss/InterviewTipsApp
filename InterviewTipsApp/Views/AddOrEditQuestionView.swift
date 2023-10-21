@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct AddQuestionView: View {
+struct AddOrEditQuestionView: View {
     
     var isAddPressed: Bool
     
@@ -71,6 +71,6 @@ struct AddQuestionView: View {
 
 struct AddQuestionView_Previews: PreviewProvider {
     static var previews: some View {
-        AddQuestionView(isAddPressed: true)
+        AddOrEditQuestionView(isAddPressed: true)
     }
 }

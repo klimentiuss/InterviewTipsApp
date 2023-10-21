@@ -9,36 +9,39 @@ import SwiftUI
 
 struct CardCell: View {
     
-    var question: String
-    var answer: String
+    var question: FetchedResults<Question>.Element?
     @State private var isHidden = false
     
     var body: some View {
         
-        VStack(alignment: .leading) {
-            Text(question)
-                .font(.system(size: 20))
-                .bold()
-                .padding(.horizontal, 20)
-                
-            if isHidden {
-                Text(answer)
-                    .padding(.top, 20)
-                    .padding(.horizontal, 20)
+        VStack {
+            NavigationLink {
+                AddOrEditQuestionView(isAddPressed: false, question: question)
+            } label: {
+                VStack(alignment: .leading) {
+                    Text(question?.questionText ?? "")
+                        .font(.system(size: 20))
+                        .bold()
+                        .padding(.horizontal, 20)
+                    
+                    if isHidden {
+                        Text(question?.questionTheme ?? "")
+                        Text(question?.answerText ?? "")
+                            .padding(.top, 20)
+                            .padding(.horizontal, 20)
+                    }
+                }
+                .onTapGesture {
+                    isHidden.toggle()
+                }
             }
         }
-        .onTapGesture {
-            isHidden.toggle()
-        }   
+        
+        
     }
 }
 
-struct CardCell_Previews: PreviewProvider {
-    static var previews: some View {
-        
-        @StateObject var viewModel = QuestionListViewModel()
-        CardCell(
-            question: "Можно ли задать параметру функции значение по умолчанию?",
-            answer: "Да, в Swift можно задать параметру функции значение по умолчанию, что делает его необязательным при вызове функции.")
-    }
-}
+//struct CardCell_Previews: PreviewProvider {
+//    static var previews: some View {
+//    }
+//}

@@ -14,7 +14,7 @@ struct InterviewTipsApp: App {
     
     var body: some Scene {
         WindowGroup {
-            QuestionListCoreDataView()
+            MainView()
                 .environment(\.managedObjectContext, dataController.containet.viewContext)
         }
     }
