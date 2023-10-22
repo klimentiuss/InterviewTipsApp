@@ -14,28 +14,43 @@ struct CardCell: View {
     
     var body: some View {
         
-        VStack {
-            NavigationLink {
-                AddOrEditQuestionView(isAddPressed: false, question: question)
-            } label: {
-                VStack(alignment: .leading) {
-                    Text(question?.questionText ?? "")
-                        .font(.system(size: 20))
-                        .bold()
-                        .padding(.horizontal, 20)
-                    
-                    if isHidden {
-                        Text(question?.questionTheme ?? "")
-                        Text(question?.answerText ?? "")
-                            .padding(.top, 20)
+        if let question = question {
+            VStack {
+                NavigationLink {
+                    AddOrEditQuestionView(isAddPressed: false, question: question)
+                } label: {
+                    VStack(alignment: .leading) {
+                        Text(question.questionText ?? "")
+                            .font(.system(size: 20))
+                            .bold()
                             .padding(.horizontal, 20)
+                        
+                        if isHidden {
+                            VStack(alignment: .leading) {
+                                HStack() {
+                                    Text(question.questionTheme ?? "")
+                                    GradeView(grade: question.questionGrade )
+                                }
+                                .opacity(0.5)
+                                Text(question.answerText ?? "")
+                                    .padding(.top, 10)
+                            }
+                            .padding(.top, 10)
+                            .padding(.horizontal, 20)
+                        }
+                        
+                    }
+                    .onTapGesture {
+                        isHidden.toggle()
+                    }
+                   
+                    .onChange(of: question) { _ in
+                        isHidden = false
                     }
                 }
-                .onTapGesture {
-                    isHidden.toggle()
-                }
             }
-        }
+        } 
+        
         
         
     }

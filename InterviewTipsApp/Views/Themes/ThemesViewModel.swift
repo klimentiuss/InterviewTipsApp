@@ -12,6 +12,6 @@ import SwiftUI
 class ThemesViewModel: ObservableObject {
 
     func sortForThemes(questionList: FetchedResults<Question>) -> Array<String?> {
-        return Array(Set(questionList.map{$0.questionTheme}))
+        return Array(Set(questionList.map{$0.questionTheme ?? ""})).sorted(by: <)
     }
 }

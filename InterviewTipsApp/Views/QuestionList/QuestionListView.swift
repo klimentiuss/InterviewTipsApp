@@ -8,12 +8,14 @@
 import SwiftUI
 import CoreData
 
+
 struct QuestionListView: View {
-        
+    
     @FetchRequest (sortDescriptors: [SortDescriptor(\.questionTheme, order: .reverse)]) var questionList: FetchedResults<Question>
     
     @State private var showingAddView = false
     @State private var filterText: String = ""
+    @State private var selectedGrade = "All"
     
     @StateObject private var viewModel = QuestionListViewModel()
     
@@ -21,20 +23,35 @@ struct QuestionListView: View {
         NavigationView {
             VStack {
                 List {
-                    ForEach(viewModel.search(by: filterText, in: questionList)) { question in
+                    ForEach(
+                        selectedGrade == "All"
+                        ? viewModel.search(by: filterText, in: questionList)
+                        : viewModel.sortByGrade(grade: selectedGrade, list: questionList))
+                    { question in
                         CardCell(question: question)
                     }
+
                 }
             }
             .searchable(text: $filterText)
             .navigationTitle("Questions")
             .toolbar {
-                ToolbarItem {
+                
+                ToolbarItem(placement: .navigationBarLeading) {
                     Button {
                         showingAddView.toggle()
                     } label: {
                         Text("Add new")
                     }
+                    
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Picker("Select", selection: $selectedGrade) {
+                        ForEach(viewModel.grades, id: \.self) { grade in
+                            Text(grade).tag(grade)
+                        }
+                    }
+                    
                     
                 }
             }

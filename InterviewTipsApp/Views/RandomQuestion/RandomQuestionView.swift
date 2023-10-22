@@ -30,9 +30,9 @@ struct RandomQuestionView: View {
                     Text("Get question")
                 }
             }
-            .onAppear {
-                viewModel.getRandomQuestion(questionList: questionList)
-            }
+//            .onAppear {
+//                viewModel.getRandomQuestion(questionList: questionList)
+//            }
             .navigationTitle("Random Question")
         }
     }

@@ -32,21 +32,23 @@ class DataController: ObservableObject {
         }
     }
     
-    func addQuestion(questionText: String, answer: String, theme: String, context: NSManagedObjectContext) {
+    func addQuestion(questionText: String, answer: String, theme: String, grade: Int, context: NSManagedObjectContext) {
         let question = Question(context: context)
         question.questionID = UUID()
         question.questionText = questionText
         question.answerText = answer
         question.questionTheme = theme
+        question.questionGrade = Int64(grade)
         
         save(context: context)
         
     }
     
-    func editQuestion(question: Question, questionText: String, answer: String, theme: String, context: NSManagedObjectContext) {
+    func editQuestion(question: Question, questionText: String, answer: String, theme: String, grade: Int, context: NSManagedObjectContext) {
         question.questionText = questionText
         question.answerText = answer
         question.questionTheme = theme
+        question.questionGrade = Int64(grade)
         
         save(context: context)
     }
@@ -54,7 +56,7 @@ class DataController: ObservableObject {
     
     func getQuestions(context: NSManagedObjectContext) {
         if !UserDefaults.standard.bool(forKey: "CoreDataInitialized") {
-            guard let path = Bundle.main.url(forResource: "Question", withExtension: "json") else { return }
+            guard let path = Bundle.main.url(forResource: "Questions", withExtension: "json") else { return }
             guard let data = try? Data(contentsOf: path) else { return }
             if let questions = try? JSONDecoder().decode([QuestionModel].self, from: data) {
                 for question in questions {
@@ -62,6 +64,7 @@ class DataController: ObservableObject {
                         questionText: question.question,
                         answer: question.answer,
                         theme: question.theme,
+                        grade: 0,
                         context: context)
                 }
                 print("Json saved to DB")

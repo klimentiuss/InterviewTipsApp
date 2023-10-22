@@ -2,6 +2,7 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22D68" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Question" representedClassName="Question" syncable="YES" codeGenerationType="class">
         <attribute name="answerText" attributeType="String"/>
+        <attribute name="questionGrade" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="questionID" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="questionText" attributeType="String"/>
         <attribute name="questionTheme" attributeType="String"/>

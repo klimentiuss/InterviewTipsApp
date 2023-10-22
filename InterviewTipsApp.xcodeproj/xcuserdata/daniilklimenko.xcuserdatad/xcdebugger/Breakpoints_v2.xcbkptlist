@@ -3,4 +3,54 @@
    uuid = "6D1EBF63-66B6-4937-8640-7F814DC7C8E0"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AC4C7DC4-E7CE-4E65-8C7C-CEBC9C22490E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "InterviewTipsApp/Views/AddOrEdit/AddOrEditQuestionViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "save(question:context:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AC4C7DC4-E7CE-4E65-8C7C-CEBC9C22490E - be8d384be061283a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "InterviewTipsApp.AddOrEditQuestionViewModel.save(question: Swift.Optional&lt;InterviewTipsApp.Question&gt;, context: __C.NSManagedObjectContext) -&gt; ()"
+                  moduleName = "InterviewTipsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/daniilklimenko/Desktop/InterviewTipsApp/InterviewTipsApp/Views/AddOrEdit/AddOrEditQuestionViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "324">
+               </Location>
+               <Location
+                  uuid = "AC4C7DC4-E7CE-4E65-8C7C-CEBC9C22490E - be8d384be061283a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "InterviewTipsApp.AddOrEditQuestionViewModel.save(question: Swift.Optional&lt;InterviewTipsApp.Question&gt;, context: __C.NSManagedObjectContext) -&gt; ()"
+                  moduleName = "InterviewTipsApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/daniilklimenko/Desktop/InterviewTipsApp/InterviewTipsApp/Views/AddOrEdit/AddOrEditQuestionViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "308">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
